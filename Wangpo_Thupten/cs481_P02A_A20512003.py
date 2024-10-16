@@ -85,3 +85,19 @@ plt.ylabel('Frequency count')
 plt.xticks(rotation=90)
 plt.show()
 
+#use frequency counts obtained earlier to calculate the unigram occurrence probability for the TWO (“technical” and not technical) words. Use lowercasing first! Display all relevant counts and probability on screen for BOTH corpora (also: enter final values in the table below). It can be zero for some words.
+
+
+unigrams = ['adiabatic', 'dinner']
+unigrams_brown = sum(frequencyDistributionBrown.values())
+unigrams_reuters = sum(frequencyDistributionReuters.values())
+def calculateProbability(count, total):
+    return count / total if total > 0 else 0
+for unigram in unigrams:
+    count = frequencyDistributionBrown.get(unigram, 0)
+    probability = calculateProbability(count, unigrams_brown)  
+    print(f"Corpus: Brown, Unigram '{unigram}', Probability = {probability}")
+for unigram in unigrams:
+    count = frequencyDistributionReuters.get(unigram, 0)
+    probability = calculateProbability(count, unigrams_reuters)  
+    print(f"Corpus: Reuters, Unigram '{unigram}', Probability = {probability}")
