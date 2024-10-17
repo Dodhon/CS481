@@ -12,7 +12,6 @@ nltk.download('stopwords')
 brown_words = brown.words()
 reuters_words = reuters.words()
 stopWordsCorpus = set(nltk.corpus.stopwords.words('english'))
-# stopWordsCorpus = stopWordsCorpus.union(set(string.punctuation))
 reutersFrequenciesAndWords = dict()
 brownFrequenciesAndWords = dict()
 
