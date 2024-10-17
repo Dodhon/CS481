@@ -20,7 +20,7 @@ brownFrequenciesAndWords = dict()
 reuters_words = [w for w in reuters_words if w.lower() not in stopWordsCorpus]
 brown_words = [w for w in brown_words if w.lower() not in stopWordsCorpus]
 
-frequencyDistributionReuters = nltk.FreqDist(word.lower() for word in reuters_words) #
+frequencyDistributionReuters = nltk.FreqDist(word.lower() for word in reuters_words) 
 frequencyDistributionBrown = nltk.FreqDist(word.lower() for word in brown_words) 
 
 for word in reuters_words:
